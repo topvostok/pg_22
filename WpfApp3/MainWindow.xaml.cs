@@ -10,6 +10,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp3.Casses;
 
 namespace WpfApp3
 {
@@ -20,8 +21,7 @@ namespace WpfApp3
     {
         // <summary> Класс для подключения базы данных и других плюшек
         public static Connection connect;
-        // <summary> Страница Main
-        public static Pages.Main main;
+        public static Pages.Main Main;
 
         public MainWindow()
         {
