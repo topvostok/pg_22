@@ -4,7 +4,6 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp3.Pages"
-      mc:Ignorable="d" 
       mc:Ignorable="d"
     d:DesignHeight="550" 
     d:DesignWidth="800"
@@ -55,11 +54,11 @@
                         Padding="7">
 
                     <Grid Height="30">
-                        <Image Source="/img/people.png" 
+                        <Image Source="C:\Users\user\source\repos\WpfApp3\WpfApp3\img\people.png" 
                                Margin="5,0,0,0" 
                                HorizontalAlignment="Left" 
                                Width="29" 
-                               Height="30"/>
+                               Height="30" VerticalAlignment="Top"/>
                         <Label x:Name="people_text" 
                                Content="Клиенты" 
                                Margin="44,0,0,0" 
@@ -81,11 +80,11 @@
                         MouseDown="Click_History">
 
                     <Grid Height="30">
-                        <Image Source="/img/calls.png" 
+                        <Image Source="C:\Users\user\source\repos\WpfApp3\WpfApp3\img\calls.png" 
                                Margin="5,0,0,0" 
                                HorizontalAlignment="Left" 
                                Width="29" 
-                               Height="30"/>
+                               Height="30" VerticalAlignment="Top"/>
                         <Label Content="История звонков" 
                                Margin="44,0,0,0" 
                                Foreground="#FF2C2C2C" 
@@ -108,7 +107,6 @@
                 <ScrollViewer x:Name="scroll_main">
                     <StackPanel x:Name="parent"/>
                 </ScrollViewer>
-
                 
                 <Frame x:Name="frame_main" 
                        NavigationUIVisibility="Hidden" 
