@@ -1,0 +1,119 @@
+﻿<Page x:Class="WpfApp3.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3.Pages"
+      mc:Ignorable="d" 
+      mc:Ignorable="d"
+    d:DesignHeight="550" 
+    d:DesignWidth="800"
+    Title="Main">
+
+    <Grid Background="#FFE8E8E8">
+
+        <!-- РЕСУРСЫ (исправлено) -->
+        <Grid.Resources>
+            <ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+        </Grid.Resources>
+
+        <!-- ВЕРХНЯЯ ПАНЕЛЬ -->
+        <Grid VerticalAlignment="Top" Height="60">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="31" 
+                                Direction="260" 
+                                Color="#FFC1C1C1" 
+                                ShadowDepth="0"/>
+            </Grid.Effect>
+
+            <Border Background="#FF2C2C2C"/>
+
+            <Image x:Name="img" 
+                   Source="/img/logo.png" 
+                   Margin="19,8,0,0" 
+                   HorizontalAlignment="Left" 
+                   Width="41" 
+                   Height="42" 
+                   VerticalAlignment="Top"/>
+        </Grid>
+
+        <!-- МЕНЮ НАВИГАЦИИ -->
+        <Grid Margin="10,77,10,0" 
+              Height="51" 
+              VerticalAlignment="Top">
+
+            <StackPanel x:Name="list_move" 
+                       Orientation="Horizontal">
+
+                <!-- Кнопка КЛИЕНТЫ -->
+                <Border x:Name="people_itsms" 
+                        Margin="5,3,10,0" 
+                        Height="45" 
+                        CornerRadius="5" 
+                        Style="{StaticResource Grid_Itm_Anim}" 
+                        MouseDown="Click_Phone" 
+                        Padding="7">
+
+                    <Grid Height="30">
+                        <Image Source="/img/people.png" 
+                               Margin="5,0,0,0" 
+                               HorizontalAlignment="Left" 
+                               Width="29" 
+                               Height="30"/>
+                        <Label x:Name="people_text" 
+                               Content="Клиенты" 
+                               Margin="44,0,0,0" 
+                               Foreground="#FF171717" 
+                               FontSize="15" 
+                               FontFamily="Corbel" 
+                               VerticalContentAlignment="Center" 
+                               Height="30"/>
+                    </Grid>
+                </Border>
+
+                <!-- Кнопка ИСТОРИЯ ЗВОНКОВ -->
+                <Border x:Name="equipment_itsms" 
+                        Margin="5,3,0,0" 
+                        Height="45" 
+                        Padding="7" 
+                        CornerRadius="5" 
+                        Style="{StaticResource Grid_Itm_Anim}" 
+                        MouseDown="Click_History">
+
+                    <Grid Height="30">
+                        <Image Source="/img/calls.png" 
+                               Margin="5,0,0,0" 
+                               HorizontalAlignment="Left" 
+                               Width="29" 
+                               Height="30"/>
+                        <Label Content="История звонков" 
+                               Margin="44,0,0,0" 
+                               Foreground="#FF2C2C2C" 
+                               FontSize="15" 
+                               FontFamily="Corbel" 
+                               VerticalContentAlignment="Center" 
+                               Height="30"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <!-- ОСНОВНАЯ ОБЛАСТЬ КОНТЕНТА -->
+        <Border Margin="10,133,10,10" 
+                CornerRadius="10" 
+                Background="White">
+
+            <Grid MinHeight="300">
+
+                <ScrollViewer x:Name="scroll_main">
+                    <StackPanel x:Name="parent"/>
+                </ScrollViewer>
+
+                <Frame x:Name="frame_main" 
+                       NavigationUIVisibility="Hidden" 
+                       Visibility="Collapsed"/>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>
