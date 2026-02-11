@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="ClassLibrary/ClassLibrary.csproj" Id="6ccf4601-031c-443e-ad2d-88dd8769083a" />
   <Project Path="WpfApp3/WpfApp3.csproj" />
 </Solution>

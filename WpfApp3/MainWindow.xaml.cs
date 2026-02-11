@@ -21,7 +21,7 @@ namespace WpfApp3
     {
         // <summary> Класс для подключения базы данных и других плюшек
         public static Connection connect;
-        public static Pages.Main Main;
+        public static Pages.Main main;
 
         public MainWindow()
         {
@@ -31,10 +31,10 @@ namespace WpfApp3
             connect = new Connection();
 
             // загружаем данные о таблице пользователей
-            connect.LoadData(Connection.tables.users);
+            connect.LoadData(Connection.Tables.Users);
 
             // загружаем данные о таблице телефонных номеров
-            connect.LoadData(Connection.tables.calls);
+            connect.LoadData(Connection.Tables.Calls);
 
             // инициализируем страницу main
             main = new Pages.Main();
