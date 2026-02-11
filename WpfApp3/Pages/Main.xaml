@@ -109,6 +109,7 @@
                     <StackPanel x:Name="parent"/>
                 </ScrollViewer>
 
+                
                 <Frame x:Name="frame_main" 
                        NavigationUIVisibility="Hidden" 
                        Visibility="Collapsed"/>
